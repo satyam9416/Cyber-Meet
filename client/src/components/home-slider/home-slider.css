@@ -1,0 +1,68 @@
+.home-slider{
+    position: relative;
+    width: 33rem;
+    margin-bottom: 12rem;
+}
+.home-slider > button {
+    width: 2.5rem;
+    position: absolute;
+    top: calc(50% - 1.25rem);
+    cursor: pointer;
+    fill: rgba(0, 0, 0, 0.87);
+    font-weight: 300;
+    background-color: transparent;
+}
+.home-slider > button > svg{
+}
+.home-slider > button:disabled {
+    fill: rgba(211, 207, 207, 0.87);
+}
+.home-slider > button:nth-of-type(1){
+    left: -4rem;
+}
+.home-slider > button:nth-of-type(2){
+    right: -4rem;
+}
+.main-page-right-slide{
+    position: relative;
+}
+.main-page-right-slide > img{
+    width: 33rem;
+    -webkit-user-drag: none;
+}
+.main-page-right-slide > div{
+    position: absolute;
+    bottom: -8rem;
+}
+.main-page-right-slide > div > h3{
+    font-size: 2.4rem;
+    color: rgba(0, 0, 0, 0.87);
+    text-align: center;
+    font-weight: 400;
+}
+.main-page-right-slide > div > p{
+    margin-top: 0.4rem;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 2rem;
+}
+.main-right-slider-indicator{
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 43.5rem;
+    width: 100%;
+}
+.main-right-slider-indicator > span{
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: rgb(199, 192, 192);
+}
+.active-slide {
+    background-color: #1a73e8 !important; 
+}

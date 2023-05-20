@@ -1,0 +1,93 @@
+.participant-box{
+    background-color: #3c4043;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: min-content;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-drag: none;
+    flex-grow: 1;
+    overflow: hidden;
+    align-self: stretch;
+}
+.participant-box .video-playback{
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none;
+    object-fit: cover;
+}
+.participant-box .video-playback video{
+   position: absolute;
+   object-fit: cover;
+}
+.participant-profile-img{
+    max-width: 16%;
+    border-radius: 50%;
+    -webkit-user-drag: none;
+}
+.participant-muted-icon{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgba(32,33,36,0.302);
+    border-radius: 50%;
+    padding: 0.5rem;
+    display: grid;
+    place-items: center;
+    z-index: 56;
+}
+.participant-muted-icon > svg{
+    font-size: 1.8rem;
+}
+.participant-name-text{
+    position: absolute;
+    bottom: 1.5rem;
+    left: 2rem;
+    font-size: 1.3rem;
+    opacity: 0.9;
+    letter-spacing: 0.1rem;
+}
+.Participants-control-options{
+    opacity: 0;
+    position: absolute;
+    transition: all .5s;
+    background-color: rgba(60, 60, 60, .87);
+    border-radius: 6374673467px;
+    display: flex;
+    gap: 0.4rem;
+}
+.participant-box:hover .Participants-control-options{
+    opacity: 1;
+}
+.Participants-control-options button{
+    padding: 1rem;
+    background-color: transparent;
+    height: 100%;
+    border-radius: 50%;
+    transition: all .3s;
+}
+.Participants-control-options button:disabled svg{
+    opacity: 0.2;
+    cursor: default;
+}
+.Participants-control-options button:enabled:hover{
+    cursor: pointer;
+    background-color: rgba(60, 60, 60, 0.97);
+}
+.Participants-control-options svg{
+    font-size: 2.5rem;
+    color: white;
+    opacity: 0.8;
+}
+.p-2{
+    position: absolute !important;
+    bottom: 4rem;
+    right: 4rem;
+    height: 20%;
+    width: 20%  !important;
+    z-index: 3;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}

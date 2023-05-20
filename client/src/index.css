@@ -1,0 +1,40 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  scroll-behavior: smooth;
+  overflow-wrap: break-word;
+}
+html,
+body,
+#root,
+.App {
+  height: -webkit-fill-available;
+  height: -moz-available;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  /* text-size-adjust: 100%; */
+}
+html {
+  font-size: 62.5%;
+  font-family: Roboto;
+}
+
+/* To fix autofill Background-color change */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 5000s;
+}
+@media (max-width: 768px) {
+  .blog-left-side {
+    display: none;
+  }
+  html {
+    font-size: 55%;
+  }
+}

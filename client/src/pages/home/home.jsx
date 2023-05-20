@@ -12,13 +12,13 @@ const HomePage = () => {
 
     const getNewMeetingLink = async() => {
         const {data} = await API.get('create-new-meet')
-        return `/meet/${data.meetId}`
+        return data.meetId;
     }
 
     const handleStartInstantMeet = async() => {
         setLoading(true)
         const newMeetlink = await getNewMeetingLink()
-        navigate(newMeetlink)
+        navigate(`/meet/${newMeetlink}`)
     }
 
     return (

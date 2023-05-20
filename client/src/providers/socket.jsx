@@ -11,7 +11,7 @@ export const useSocket = () => React.useContext(SocketContext)
 export const SocketProvider = ({ children }) => {
 
     const getSocket = useCallback(() => io(
-        import.meta.VITE_SERVER_URL, {
+        import.meta.env.VITE_SERVER_URL, {
         transports: ['websocket']
     }), [])
 

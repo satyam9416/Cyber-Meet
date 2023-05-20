@@ -84,6 +84,7 @@ const MeetLive = ({ userData }) => {
         let stream;
         try {
             stream = await navigator.mediaDevices.getUserMedia(userMediaconstraint)
+            console.log(stream)
         } catch (error) {
             console.log('cannot get media !!!')
         }

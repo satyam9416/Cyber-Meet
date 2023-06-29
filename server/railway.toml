@@ -1,0 +1,4 @@
+[ports]
+# Specify the ports to be opened for WebRTC communication
+tcp = [80, 443, 8443, 9000]  # Add any additional required ports
+udp = [9000, 33673, 33149, 33673]  # Add any additional required ports

@@ -84,9 +84,10 @@ const MeetLive = ({ userData }) => {
         let stream;
         try {
             stream = await navigator.mediaDevices.getUserMedia(userMediaconstraint)
-            console.log(stream)
+            console.log('stream : ', stream)
         } catch (error) {
-            console.log('cannot get media !!!')
+            setLoading(false)
+            return console.log('cannot get media !!!')
         }
         setLocalStream(stream)
         stream.getTracks().forEach(track => localPeer.addTrack(track, stream));
@@ -103,6 +104,7 @@ const MeetLive = ({ userData }) => {
         await peer.addTransceiver('video', { direction: "recvonly" })
         await peer.addTransceiver('audio', { direction: "recvonly" })
         await createOffer(peer)
+        console.log('offer created !')
         peer.ontrack = e => {
             if (e.streams && e.streams[0]) {
                 setRemoteStreams(prev => {
@@ -111,6 +113,7 @@ const MeetLive = ({ userData }) => {
                 })
             }
         }
+
         socket.emit('consume', { offer: peer.localDescription, socketId: id })
         peer.onicecandidate = ({ candidate }) => {
             socket.emit('consumer-ice', { ice: candidate, socketId: id })
@@ -131,7 +134,7 @@ const MeetLive = ({ userData }) => {
         setParticipants(members)
         members.map(async (m) => {
             if (m.socketId !== socket.id) {
-                await getRemoteStreams(m.socketId)``
+                await getRemoteStreams(m.socketId)
             }
         })
     }, [])

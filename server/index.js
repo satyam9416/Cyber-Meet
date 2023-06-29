@@ -82,6 +82,7 @@ const removeUser = (socketId) => {
 }
 
 io.on('connection', socket => {
+ 
     socket.on('join-meet', async ({ userData, offer }) => {
         const { meetId } = userData
         users.push({ ...userData, socketId: socket.id })
@@ -144,6 +145,6 @@ io.on('connection', socket => {
 
 })
 
-http.listen(PORT, () => {
+http.listen(PORT, '192.168.0.102', () => {
     console.log('Server is running at port ', PORT)
 })

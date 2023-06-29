@@ -12,21 +12,21 @@ export const WebRTCProvider = ({ children }) => {
             {
                 urls: "stun:relay.metered.ca:80",
             },
-            {
-                urls: "turn:relay.metered.ca:80",
-                username: "07980d6073378245d1ed6ef9",
-                credential: "vkbnV4euCGd/+udF",
-            },
-            {
-                urls: "turn:relay.metered.ca:443",
-                username: "07980d6073378245d1ed6ef9",
-                credential: "vkbnV4euCGd/+udF",
-            },
-            {
-                urls: "turn:relay.metered.ca:443?transport=tcp",
-                username: "07980d6073378245d1ed6ef9",
-                credential: "vkbnV4euCGd/+udF",
-            },
+            // {
+            //     urls: "turn:relay.metered.ca:80",
+            //     username: "07980d6073378245d1ed6ef9",
+            //     credential: "vkbnV4euCGd/+udF",
+            // },
+            // {
+            //     urls: "turn:relay.metered.ca:443",
+            //     username: "07980d6073378245d1ed6ef9",
+            //     credential: "vkbnV4euCGd/+udF",
+            // },
+            // {
+            //     urls: "turn:relay.metered.ca:443?transport=tcp",
+            //     username: "07980d6073378245d1ed6ef9",
+            //     credential: "vkbnV4euCGd/+udF",
+            // },
         ],
     }))
 
